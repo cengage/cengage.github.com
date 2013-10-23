@@ -3,8 +3,8 @@
 <head>
     <meta charset='utf-8'>
 
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap/2.3.0/css/bootstrap.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap/2.3.0/css/bootstrap-responsive.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.css" media="screen"/>
 
     <link rel="stylesheet" type="text/css" href="css/custom.css" media="screen"/>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -24,17 +24,20 @@
 <body class="github" data-ng-controller="mainController">
     <div class="navbar">
         <div class="navbar-inner">
-            <a class="logo" href="http://www.cengage.com">Cengage Learning</a>
+            <a class="brand logo" href="http://www.cengage.com">Cengage Learning</a>
+            <ul class="nav nav-pills">
+                <li class=""><a href="https://github.com/cengage/">All Repositories</a></li>
+            </ul>
         </div>
     </div>
     <div class="container-fluid row-fluid">
         <ul class="projects">
             <li class="project" data-ng-repeat="project in projects" data-project-id="{{project.id}}">
-                <h4>{{project.name}}</h4>
-                <h6>{{project.language}}</h6>
-                <p>{{project.description}}</p>
-
-
+               <a href="https://github.com/cengage/{{project.name}}">
+                   <h4>{{project.name}}</h4>
+                   <h6>{{project.language}}</h6>
+                   <p>{{project.description}}</p>
+               </a>
             </li>
         </ul>
 

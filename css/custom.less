@@ -5,21 +5,23 @@
 
   .navbar-inner {
     border-radius: 0;
-
+    .nav {
+      margin: 6px 0 0 0;
+    }
 
 
     .logo {
-      background: url(../img/CL_Logo_RGB_R.png) no-repeat;
+      background: url(../img/CL_Logo_RGB_R_oss.png) no-repeat;
       display: inline-block;
-      width: 248px;
-      height: 60px;
+      margin: 8px 0 0 0;
+      width: 370px;
       text-indent: -9000px;
-      margin: 10px 0 0 0;
     }
   } /* end navbar inner  */
 
 
   .container-fluid {
+    padding: 0;
     .projects {
       list-style-type: none;
       list-style: none;
@@ -27,17 +29,27 @@
     .project {
       background: url(../img/white_70.png) transparent;
       border-radius: 10px;
-      padding: 8px;
       width: 20%;
       float: left;
       margin-right: 20px;
       margin-bottom: 20px;
       list-style-type: type;
       list-style: none;
-      min-height: 120px;
+
+      box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.75);
+      border: 2px solid #FFFFFF;
+
       &:hover {
         background: #ffffff;
         cursor: pointer;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        display: inline-block;
+        min-height: 120px;
+        padding: 8px;
       }
 
       h4 {
