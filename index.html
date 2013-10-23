@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="CengageOss">
 <head>
     <meta charset='utf-8'>
 
@@ -7,6 +7,12 @@
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/2.3.0/css/bootstrap-responsive.css" media="screen"/>
 
     <link rel="stylesheet" type="text/css" href="css/custom.css" media="screen"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/cengage-oss.js"></script>
+
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -15,7 +21,7 @@
     <title>Cengage ♥ Open Source</title>
 </head>
 
-<body class="github">
+<body class="github" data-ng-controller="mainController">
     <div class="navbar">
         <div class="navbar-inner">
             <a class="logo" href="http://www.cengage.com">Cengage Learning</a>
@@ -23,13 +29,12 @@
     </div>
     <div class="container-fluid row-fluid">
         <ul class="projects">
-            <li class="project">
-                <h4>Slidekick</h4>
-                <p>JQuery CSS3 slider / carousel with touch support for swipe gestures.</p>
-            </li>
-            <li class="project">
-                <h4>Proxit</h4>
-                <p>Simple proxy server built on connect.</p>
+            <li class="project" data-ng-repeat="project in projects" data-project-id="{{project.id}}">
+                <h4>{{project.name}}</h4>
+                <h6>{{project.language}}</h6>
+                <p>{{project.description}}</p>
+
+
             </li>
         </ul>
 
